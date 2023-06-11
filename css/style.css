@@ -1,0 +1,74 @@
+
+.one .date{
+	width: 25%;
+}
+.one textarea{
+	width: 99%;
+	height: 100px;
+}
+.one table{
+	width: 100%;
+}
+.one p{
+	margin-bottom: 0px;
+}
+.one .global{
+	background: #fff;
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 400px;
+	border: 1px solid lightgray;
+}
+
+body{
+	background: #ccc;
+}
+.two{
+	border: 6px solid #fb8500;
+	padding: 10px;
+	background: #333;
+	color: #fff;
+	font-family: Arial;
+	width: 400px;
+	margin: 10px auto;
+	border-radius: 20px;
+}
+.two h1{
+	
+	text-align: center;
+}
+.two h2{
+	margin: 40px 0 10px;
+	padding-top: 10px;
+	border-top: 1px solid #fb8500;
+}
+.name_reg{
+	display: flex;
+}
+.two input{
+	background: #333;
+	padding: 4px;
+	box-sizing: border-box;
+}
+.two input[type='radio']:after {
+        width: 11px;
+        height: 11px;
+        border-radius: 50%;
+        top: 0;
+        left: 0;
+        border: 1.5px solid #ccc;
+        position: relative;
+        background-color: #333;
+        content: '';
+        display:block;
+        visibility: visible;
+    }
+.two select{
+	background: #333;
+	color: #fff;
+	border: 2px lightgray;
+}
+.two input[type='radio']:checked:after {
+        background-color: #fb8500;
+    }
