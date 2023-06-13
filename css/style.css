@@ -25,8 +25,10 @@ body{
 	background: #ccc;
 }
 .two{
+	color: #fff;
 	border: 6px solid #fb8500;
 	padding: 10px;
+	box-sizing: border-box;
 	background: #333;
 	color: #fff;
 	font-family: Arial;
@@ -35,26 +37,39 @@ body{
 	border-radius: 20px;
 }
 .two h1{
-	
+	margin: 10px 0;
+	padding-bottom: 20px;
 	text-align: center;
+	border-bottom: 1px solid #fb8500;
 }
 .two h2{
-	margin: 40px 0 10px;
+	margin: 50px 0 10px;
 	padding-top: 10px;
 	border-top: 1px solid #fb8500;
 }
 .name_reg{
 	display: flex;
 }
-.two input{
+::selection {
+background: #fb8500;
+}
+
+.two select{
 	background: #333;
+	color: #fff;
+	border: 2px inset #333;
+}
+.two input{
+	color: #fff;
+	background: #333;
+	border: 2px inset #333;
 	padding: 4px;
 	box-sizing: border-box;
 }
-.two input[type='radio']:after {
+.two input[type='radio']:after,
+.two input[type='checkbox']:after {
         width: 11px;
         height: 11px;
-        border-radius: 50%;
         top: 0;
         left: 0;
         border: 1.5px solid #ccc;
@@ -64,11 +79,47 @@ body{
         display:block;
         visibility: visible;
     }
-.two select{
-	background: #333;
-	color: #fff;
-	border: 2px lightgray;
+.two input[type='radio']:after{
+	border-radius: 50%;
 }
-.two input[type='radio']:checked:after {
+.two input[type='checkbox']:checked:after{
+	content: 'X';
+	color: #000;
+	font-weight: bold;
+	text-align: center;
+	font-size: 11px;
+	line-height: 11.5px;
+}
+.two input[type='radio']:checked:after,
+.two input[type='checkbox']:checked:after{
         background-color: #fb8500;
     }
+.two .date_wrap{
+	display: flex;
+	justify-content: space-between;
+	padding: 0 20px;
+}
+.two textarea{
+	margin: 10px 0;
+	background: #333;
+	width: 99%;
+	min-height: 80px;
+	color: #fff;
+}
+.two button{
+	background: #333;
+	border-color: #fb8500;
+	color: #fff;
+	font-weight: bold;
+	border-radius: 6px;
+}
+.two button[disabled]{
+	opacity: 0.4;
+}
+.two .error{
+	margin: 0;
+	display: inline-block;
+	color: #a00;
+	background: #f55;
+	padding: 0 10px;
+}
