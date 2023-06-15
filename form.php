@@ -6,7 +6,7 @@
 ?>
 	<form class="two" action="obr.php" method="POST">
 		<h1>Регистрация</h1>
-		<div class="name_reg">
+		<div class="name_reg ">
 			<div class="name_item">
 				<label for="first_name">Имя:</label>
 				<input type="text" name="first_name" id="first_name" class='<?php echo (isset(errorSuccess('first_name')['class']))? errorSuccess('first_name')['class']: "";?>' placeholder="Введите имя" value='<?php echo (isset(errorSuccess('first_name')['text']))? errorSuccess('first_name')['text']: "";?>'>
@@ -16,12 +16,19 @@
 				<input type="text" name="last_name" id="last_name" class='<?php echo (isset(errorSuccess('last_name')['class']))? errorSuccess('last_name')['class']: ""; ?>' placeholder="Введите фамилию" value='<?php echo (isset(errorSuccess('last_name')['text']))? errorSuccess('last_name')['text']: ""; ?>'>
 			</div>
 		</div>
-		<div class="gender">
+		<div class="gender <?php echo (isset(errorSuccess('gender_i')['class']))? errorSuccess('gender_i')['class']: ""; ?>">
 			<h2>Пол</h2>
-			<input type="radio" name="gender_i">Мужской
-			<input type="radio" name="gender_i">Женский
+			<div class="gender_item">
+				<input type="radio" name="gender_i" id="man" value="M" <?php echo ((isset(errorSuccess('gender_i')['text'])) && errorSuccess('gender_i')['text'] == 'M')? 'checked': ""; ?>>
+				<label for="man">Мужской</label>
+			</div>
+			<div class="gender_item">
+				<input type="radio" name="gender_i" id="woman" value="W" <?php echo ((isset(errorSuccess('gender_i')['text'])) && errorSuccess('gender_i')['text'] == 'W')? 'checked': ""; ?>>
+				<label for="woman">Женский</label>
+			</div>
+			
 		</div>
-		<div class="date">
+		<div class="date <?php echo (isset(errorSuccess('date')['class']))? errorSuccess('date')['class']: ""; ?>">
 			<h2>Дата рождения</h2>
 			<div class="date_wrap">
 				<select>
@@ -110,33 +117,45 @@
 				</div>	
 			</div>
 		</div>
-		<div class="interests">
+		<div class="interests <?php echo (isset(errorSuccess('intersting')['class']))? errorSuccess('intersting')['class']: ""; ?>" >
 			<h2>Интересы</h2>
 			<div class="interest_item">
-				<input type="checkbox" name="intersting" id="prog">
+				<input type="checkbox" name="intersting" value="A" id="prog">
 				<label for="prog">Програмирование</label>
 			</div>
 			<div class="interest_item">
-				<input type="checkbox" name="intersting" id="prog">
-				<label for="prog">Продвижение</label>
+				<input type="checkbox" name="intersting" value="B" id="prod">
+				<label for="prod">Продвижение</label>
 			</div>
 			<div class="interest_item">
-				<input type="checkbox" name="intersting" id="prog">
-				<label for="prog">SMM</label>
+				<input type="checkbox" name="intersting" value="C" id="smm">
+				<label for="smm">SMM</label>
 			</div>
 			<div class="interest_item">
-				<input type="checkbox" name="intersting" id="prog">
-				<label for="prog">Верстка</label>
+				<input type="checkbox" name="intersting" value="D" id="ver">
+				<label for="ver">Верстка</label>
 			</div>
 			<div class="interest_item">
-				<input type="checkbox" name="intersting" id="prog">
-				<label for="prog">Дизайн</label>
+				<input type="checkbox" name="intersting" value="E" id="diz">
+				<label for="diz">Дизайн</label>
 			</div>
+
+			<?php
+			
+
+			?>
+
 		</div>
-		<div class="about">
+		<div class="about <?php echo (isset(errorSuccess('about')['class']))? errorSuccess('about')['class']: ""; ?>">
 			<textarea placeholder="Расскажите о себе"></textarea>
 		</div>
 		<button >Отправить</button>
+
 	</form>	
 
 	<!-- disabled -->
+	
+		<?php
+			echo errorSuccess('gender_i')['text'];
+			print_r(errorSuccess('intersting')['text']);
+		?>
