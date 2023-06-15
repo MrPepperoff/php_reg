@@ -9,11 +9,11 @@
 		<div class="name_reg">
 			<div class="name_item">
 				<label for="first_name">Имя:</label>
-				<input type="text" name="first_name" id="first_name" class='<?php echo errorSuccess('first_name')['class'];?>' placeholder="Введите имя" value='<?php echo errorSuccess('first_name')['text'];?>'>
+				<input type="text" name="first_name" id="first_name" class='<?php echo (isset(errorSuccess('first_name')['class']))? errorSuccess('first_name')['class']: "";?>' placeholder="Введите имя" value='<?php echo (isset(errorSuccess('first_name')['text']))? errorSuccess('first_name')['text']: "";?>'>
 			</div>
 			<div class="name_item">
 				<label for="last_name">Фамилия:</label>
-				<input type="text" name="last_name" id="last_name" class='<?php echo errorSuccess('last_name')['class']; ?>' placeholder="Введите фамилию" value='<?php echo errorSuccess('last_name')['text']; ?>'>
+				<input type="text" name="last_name" id="last_name" class='<?php echo (isset(errorSuccess('last_name')['class']))? errorSuccess('last_name')['class']: ""; ?>' placeholder="Введите фамилию" value='<?php echo (isset(errorSuccess('last_name')['text']))? errorSuccess('last_name')['text']: ""; ?>'>
 			</div>
 		</div>
 		<div class="gender">

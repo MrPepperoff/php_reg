@@ -2,7 +2,7 @@
 		
 		if(strlen($_POST['first_name']) < 1){
 			// Error
-			header("location: index.php?status=101first_name=&last_name=");
+			header("location: index.php?status=101&first_name=&last_name=");
 		}
 		else{
 			// Good
