@@ -26,7 +26,6 @@
 				<input type="radio" name="gender_i" id="woman" value="W" <?php echo ((isset(errorSuccess('gender_i')['text'])) && errorSuccess('gender_i')['text'] == 'W')? 'checked': ""; ?>>
 				<label for="woman">Женский</label>
 			</div>
-			
 		</div>
 		<div class="date <?php echo (isset(errorSuccess('date')['class']))? errorSuccess('date')['class']: ""; ?>">
 			<h2>Дата рождения</h2>
@@ -120,29 +119,29 @@
 		<div class="interests <?php echo (isset(errorSuccess('intersting')['class']))? errorSuccess('intersting')['class']: ""; ?>" >
 			<h2>Интересы</h2>
 			<div class="interest_item">
-				<input type="checkbox" name="intersting" value="A" id="prog">
+				<input type="checkbox" name="intersting[]" value="A" id="prog">
 				<label for="prog">Програмирование</label>
 			</div>
 			<div class="interest_item">
-				<input type="checkbox" name="intersting" value="B" id="prod">
+				<input type="checkbox" name="intersting[]" value="B" id="prod">
 				<label for="prod">Продвижение</label>
 			</div>
 			<div class="interest_item">
-				<input type="checkbox" name="intersting" value="C" id="smm">
+				<input type="checkbox" name="intersting[]" value="C" id="smm">
 				<label for="smm">SMM</label>
 			</div>
 			<div class="interest_item">
-				<input type="checkbox" name="intersting" value="D" id="ver">
+				<input type="checkbox" name="intersting[]" value="D" id="ver">
 				<label for="ver">Верстка</label>
 			</div>
 			<div class="interest_item">
-				<input type="checkbox" name="intersting" value="E" id="diz">
+				<input type="checkbox" name="intersting[]" value="E" id="diz">
 				<label for="diz">Дизайн</label>
 			</div>
-
+			<input type="submit" name="submit" value="Submit">
 			<?php
 			
-
+			echo checkArray('intersting');
 			?>
 
 		</div>
@@ -155,7 +154,8 @@
 
 	<!-- disabled -->
 	
-		<?php
-			echo errorSuccess('gender_i')['text'];
-			print_r(errorSuccess('intersting')['text']);
-		?>
+<?php
+			echo 'test: ';
+			
+			echo checkArray('intersting');
+			?>

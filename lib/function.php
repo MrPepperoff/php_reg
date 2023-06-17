@@ -15,6 +15,7 @@
 		$mass = [
 				'class' => null,
 				'text' => null,
+
 			];
 		if (isset($_GET[$item])) {
 
@@ -29,25 +30,23 @@
 			$mass = [
 				'class' => $class,
 				'text' => $text,
+
 			];
 			return $mass;
+
 		}
 	}
+	function checkArray($items){
+		if(isset($_POST['submit'])){
+		    if(!empty($_POST[$items])){
+		        foreach($_POST[$items] as $item){
+		            $mass_i[] = $item;
+		            
+		        }
+		    }
+		}
+	}	
+
 ?>
 
 
-<!-- 		if (isset($_GET['first_name'])) {
-				if (empty($_GET['first_name'])) {
-					$class = 'error';
-				}
-				$class = 'success';
-				$first_name = $_GET['first_name'];
-				echo $first_name;
-			}
- -->
-
-<!-- 
-if (isset($_GET['status'])){
-	$class = status_request($_GET['status']);
-		if($class == 'success'){
- -->
