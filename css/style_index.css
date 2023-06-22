@@ -1,27 +1,4 @@
 
-.one .date{
-	width: 25%;
-}
-.one textarea{
-	width: 99%;
-	height: 100px;
-}
-.one table{
-	width: 100%;
-}
-.one p{
-	margin-bottom: 0px;
-}
-.one .global{
-	background: #fff;
-	position: relative;
-	margin-left: auto;
-	margin-right: auto;
-	max-width: 400px;
-	border: 1px solid lightgray;
-}
-
-/*////////////////////////////////////////////////////////////*/
 body{
 	background: url('https://i2.wp.com/www.123freevectors.com/wp-content/original/112868-red-and-black-blurred-background-vector.jpg') no-repeat center top;
 	background-size: cover;
@@ -101,7 +78,7 @@ background: #fb8500;
 .two input[type='checkbox']:checked:after{
         background-color: #fb8500;
     }
-.two .date_wrap{
+.two .data_wrap{
 	display: flex;
 	justify-content: space-between;
 	padding: 0 20px;
@@ -111,7 +88,9 @@ background: #fb8500;
 	box-sizing: border-box;
 	background: #333;
 	width: 100%;
-	min-height: 80px;
+	resize: vertical;
+	
+	height: 80px;
 	color: #fff;
 }
 .two button{
@@ -127,7 +106,6 @@ background: #fb8500;
 .two .error,
 .two .success{
 	margin: 0;
-/*	display: inline-block;*/
 	box-sizing: border-box;
 }
 .two .error{

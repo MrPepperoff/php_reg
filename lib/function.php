@@ -36,17 +36,6 @@
 
 		}
 	}
-	function checkArray($items){
-		if(isset($_POST['submit'])){
-		    if(!empty($_POST[$items])){
-		        foreach($_POST[$items] as $item){
-		            $mass_i[] = $item;
-		            
-		        }
-		    }
-		}
-	}	
-
 ?>
 
 
